@@ -127,5 +127,3 @@ This plot shows the training loss over 100 epochs for the MLP model. As expected
 - PyTorch Documentation: [PyTorch Official](https://pytorch.org/docs/stable/index.html)
 
 ---
-
-This markdown report provides a clear and detailed description of the project's methodology, results, and insights, with appropriate figures and references. Let me know if you need any further adjustments!
