@@ -1,4 +1,3 @@
-Here is a complete markdown report for the project:
 
 ---
 
