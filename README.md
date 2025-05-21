@@ -11,7 +11,7 @@ Predicting student performance is a critical problem that can lead to targeted i
 ## 1. Introduction
 Student performance prediction is a significant area of research in educational data mining, with potential applications in identifying at-risk students and designing personalized learning strategies. The aim of this study is to apply a machine learning technique, specifically a Multilayer Perceptron (MLP), to predict the academic performance of students based on a wide range of demographic, academic, and social features. The Student Performance dataset, available on Kaggle, provides a rich set of features, including personal information, academic history, and social context, which are believed to influence a student's performance.
 
-The primary objective of this work is to build an MLP model capable of predicting the final grade (G3) of students, based on their characteristics. We will implement the model using PyTorch, train it on the data, and evaluate its performance using relevant metrics. Additionally, we will explore the impact of different features and regularization techniques on model accuracy.
+The primary objective of this work is to build an MLP model capable of predicting the final grade (G3) of students, based on their characteristics. I will implement the model using PyTorch, train it on the data, and evaluate its performance using relevant metrics. Additionally, I will explore the impact of different features and regularization techniques on model accuracy.
 
 ---
 
@@ -38,16 +38,16 @@ This rich set of features provides a variety of insights into the students' educ
 Data preprocessing is a crucial step in machine learning projects to ensure that the dataset is clean, consistent, and suitable for modeling. The following preprocessing steps were applied to the Student Performance dataset:
 
 ### 3.1 Handling Missing Values
-Missing values are common in real-world datasets and can significantly affect model performance. In this dataset, there were no missing values. However, in a real-world scenario, we would employ techniques such as mean imputation for numerical values or mode imputation for categorical features.
+Missing values are common in real-world datasets and can significantly affect model performance. In this dataset, there were no missing values. However, in a real-world scenario, I would employ techniques such as mean imputation for numerical values or mode imputation for categorical features.
 
 ### 3.2 Encoding Categorical Variables
-Several categorical features (e.g., 'sex', 'famsize', 'internet', 'romantic') need to be converted into numerical representations before they can be fed into the machine learning model. We used one-hot encoding to transform these categorical variables into binary columns. For example, the 'sex' variable was encoded into two binary columns: one for male ('M') and another for female ('F').
+Several categorical features (e.g., 'sex', 'famsize', 'internet', 'romantic') need to be converted into numerical representations before they can be fed into the machine learning model. I used one-hot encoding to transform these categorical variables into binary columns. For example, the 'sex' variable was encoded into two binary columns: one for male ('M') and another for female ('F').
 
 ### 3.3 Feature Scaling
-Feature scaling is necessary when features have different scales. For numerical features like 'age', 'studytime', and 'absences', we applied standardization to bring all features to a similar scale with a mean of 0 and a standard deviation of 1.
+Feature scaling is necessary when features have different scales. For numerical features like 'age', 'studytime', and 'absences', I applied standardization to bring all features to a similar scale with a mean of 0 and a standard deviation of 1.
 
 ### 3.4 Data Splitting
-To evaluate the model's generalization ability, we split the dataset into training and testing sets. The training set constituted 80\% of the data, while the testing set contained the remaining 20\%. This split ensures that the model is trained on a substantial amount of data while still being evaluated on unseen data.
+To evaluate the model's generalization ability, I split the dataset into training and testing sets. The training set constituted 80\% of the data, while the testing set contained the remaining 20\%. This split ensures that the model is trained on a substantial amount of data while still being evaluated on unseen data.
 
 ---
 
@@ -64,7 +64,7 @@ The next step in the project was to implement the Multilayer Perceptron (MLP) mo
 To prevent overfitting, dropout regularization was applied after each hidden layer with a dropout rate of 0.3. This means that during training, 30% of the neurons in the hidden layers are randomly "dropped out" to force the model to generalize better.
 
 ### 4.3 Optimization
-We used the Adam optimizer for training the MLP model. Adam is an adaptive learning rate optimization algorithm that combines the advantages of both SGD with momentum and RMSprop. It is computationally efficient and works well in practice, especially for problems with large datasets.
+I used the Adam optimizer for training the MLP model. Adam is an adaptive learning rate optimization algorithm that combines the advantages of both SGD with momentum and RMSprop. It is computationally efficient and works well in practice, especially for problems with large datasets.
 
 ---
 
@@ -73,7 +73,7 @@ We used the Adam optimizer for training the MLP model. Adam is an adaptive learn
 The MLP model was trained using the training dataset for 100 epochs with a mini-batch size of 32. During each epoch, the model's weights were updated using backpropagation, a method of gradient descent where the error is propagated backward through the network to adjust the weights.
 
 ### 5.2 Evaluation Metrics
-We used several evaluation metrics to assess the performance of the model:
+I used several evaluation metrics to assess the performance of the model:
 - **Mean Squared Error (MSE)**: Measures the average squared difference between predicted and actual values. Lower values indicate better performance.
 - **Mean Absolute Error (MAE)**: Measures the average absolute difference between predicted and actual values.
 - **R-squared (R2)**: A statistical measure that represents the proportion of the variance in the dependent variable that is predictable from the independent variables.
@@ -90,7 +90,7 @@ The model performed well, with an R-squared value of 0.72, indicating that 72% o
 
 ## 6. Analysis and Interpretation
 ### 6.1 Feature Importance
-After training the model, we analyzed the feature importance by examining the weights of the model. We found that the most influential features in predicting student performance were:
+After training the model, I analyzed the feature importance by examining the weights of the model. I found that the most influential features in predicting student performance were:
 - **Failures**: Students with more previous failures had lower final grades.
 - **Study Time**: More hours spent on studying per week were associated with higher grades.
 - **Absences**: More school absences were negatively correlated with academic performance.
@@ -104,7 +104,7 @@ Although the model performed well, there are several areas for improvement:
 ---
 
 ## 7. Conclusion
-In this study, we developed an MLP model to predict student performance using various demographic, academic, and social features. The model demonstrated satisfactory performance with an R-squared value of 0.72. The most influential factors were the number of previous failures, study time, and absences. Future improvements could involve exploring other machine learning algorithms and incorporating additional features. This work demonstrates the potential of machine learning techniques in educational data analysis and highlights the importance of data-driven decision-making in education.
+In this study, I developed an MLP model to predict student performance using various demographic, academic, and social features. The model demonstrated satisfactory performance with an R-squared value of 0.72. The most influential factors were the number of previous failures, study time, and absences. Future improvements could involve exploring other machine learning algorithms and incorporating additional features. This work demonstrates the potential of machine learning techniques in educational data analysis and highlights the importance of data-driven decision-making in education.
 
 ---
 
